@@ -35,10 +35,10 @@ public class EndGameTextGenerator : MonoBehaviour
         }
         if(step == 2){
             txt.GetComponent<UnityEngine.UI.Text>().text = "Thank god I'm vegetarian!";
-            btnTxt.GetComponent<UnityEngine.UI.Text>().text = "Back to the Menu";
+            btnTxt.GetComponent<UnityEngine.UI.Text>().text = "Go to the big city";
         }
         if(step == 3){
-            SceneManager.LoadScene("InitialScene");
+            SceneManager.LoadScene("SecondScene");
         }
 
         
@@ -70,6 +70,24 @@ public class EndGameTextGenerator : MonoBehaviour
             btnTxt.GetComponent<UnityEngine.UI.Text>().text = "Understood!";
         }
         if(step == 3){
+            SceneManager.LoadScene("InitialScene");
+        }
+
+        
+    }
+    public void EndGameStep(){
+        step += 1;
+        if(step == 1){
+            txt.GetComponent<UnityEngine.UI.Text>().text = "It is all my fault! I guess I shouldn't have served it with that meat.. Oh, You are asking <b> Where did I get that meat?</b>";
+        }
+        if(step == 2){
+            txt.GetComponent<UnityEngine.UI.Text>().text = "I found the meat wrapped in some sheets close to the graveyard";
+        }
+        if(step == 3){
+            txt.GetComponent<UnityEngine.UI.Text>().text = "Now that I say it out loud it does sound stupid...";
+            btnTxt.GetComponent<UnityEngine.UI.Text>().text = "Back to the Menu";
+        }
+        if(step == 4){
             SceneManager.LoadScene("InitialScene");
         }
 

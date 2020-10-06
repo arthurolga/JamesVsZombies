@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Chest
   - Sensei
+  - Cook
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - Arrow
   - Player
-  - 
+  - Sensei
   - 
   - 
   - 

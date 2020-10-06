@@ -44,6 +44,7 @@ public class ZombieScript : MonoBehaviour
         health -= a;
         StartCoroutine(BlinkRed());
         if (health <= 0){
+            SFCController.PlaySound("zombieDeath");
             Destroy(gameObject);
         }
     }

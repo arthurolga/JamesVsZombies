@@ -151,6 +151,10 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("WinGame");
         }
+        if (collision.gameObject.tag == "Cook")
+        {
+            SceneManager.LoadScene("WinGame2");
+        }
         
     }
 
@@ -158,6 +162,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage){
         // Debug.Log("Ouch! ");
+        SFCController.PlaySound("zombieBite");
         SFCController.PlaySound("hit");
         health -= damage;
         lifeCounter.GetComponent<UnityEngine.UI.Text>().text = string.Format("{0}/{1} Lives", health, maxHealth);
@@ -172,6 +177,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     IEnumerator Die(){
+        SFCController.PlaySound("playerDeath");
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene("LoseGame");
     }
